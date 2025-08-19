@@ -75,6 +75,7 @@ function copy
 end
 
 ## Useful aliases
-alias nix-update="nix run home-manager/release-24.05 -- switch --flake ~/.config/home-manager"
+alias sys-update="sudo dnf update"
+alias nix-update="nix flake update --flake ~/.config/home-manager && nix run home-manager/release-24.05 -- switch --flake ~/.config/home-manager"
 alias nix-clean="nix-collect-garbage -d"
 alias nix-config="nano ~/.config/home-manager/home.nix"
